@@ -1,0 +1,93 @@
+<div class="fater-logo">
+    超市管理系统
+</div>
+
+
+
+{% if request.session.user.type == 0 %}
+<div class="fater-menu-vertical">
+    <div class="fater-menu-item">
+        <a href="/marks/show/">
+            <span class="fa fa-home"></span> 系统首页
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/users/show/">
+            <span class="fa fa-address-card"></span> 系统用户管理
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/memberLevel/show/">
+            <span class="fa fa-eraser"></span> 会员等级设置
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/memberInfos/show/">
+            <span class="fa fa-drivers-license-o"></span> 会员信息管理
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/goodTypes/show/">
+            <span class="fa fa-headphones"></span> 商品类型管理
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/goodInfos/show/">
+            <span class="fa fa-life-bouy"></span> 商品信息管理
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/sals/show/">
+            <span class="fa fa-newspaper-o"></span> 销售记录管理
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/stocks/show/">
+            <span class="fa fa-pencil-square"></span> 采购记录管理
+        </a>
+    </div>
+</div>
+
+{% elif  request.session.user.type == 1 %}
+<div class="fater-menu-vertical">
+    <div class="fater-menu-item">
+        <a href="/marks/show/">
+            <span class="fa fa-home"></span> 系统首页
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/memberInfos/show/">
+            <span class="fa fa-drivers-license-o"></span> 会员信息查看
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/goodInfos/show/">
+            <span class="fa fa-life-bouy"></span> 商品信息查看
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/sals/show/">
+            <span class="fa fa-newspaper-o"></span> 销售记录管理
+        </a>
+    </div>
+</div>
+{% elif  request.session.user.type == 2 %}
+<div class="fater-menu-vertical">
+    <div class="fater-menu-item">
+        <a href="/marks/show/">
+            <span class="fa fa-home"></span> 系统首页
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/goodInfos/show/">
+            <span class="fa fa-life-bouy"></span> 商品信息浏览
+        </a>
+    </div>
+    <div class="fater-menu-item">
+        <a href="/marks/stocks/show/">
+            <span class="fa fa-pencil-square"></span> 采购记录管理
+        </a>
+    </div>
+</div>
+{% endif %}
+
